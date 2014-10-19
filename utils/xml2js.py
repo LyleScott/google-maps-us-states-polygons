@@ -1,3 +1,4 @@
+import os
 from pprint import pprint
 from xml.dom import minidom
 
@@ -28,5 +29,5 @@ def write_file(path, data):
 
 if __name__ == '__main__':
     xml_file = 'states.xml'
-    out_file = 'coords.js'
+    out_file = os.path.join('..', 'coords.js')
     write_file(out_file, xml2dict(xml_file))
